@@ -15,7 +15,7 @@ dag = DAG(
 
 t1 = PostgresToGoogleCloudStorageOperator(
   task_id="postgres_to_gcs",
-  sql="SELECT * FROM land_registry_price_paid_uk WHERE transfer_date is '{{ ds }}'",
+  sql="SELECT * FROM land_registry_price_paid_uk WHERE transfer_date between (now() - '1 week'::interval) and (now() - '2 weeks'::interval",
   bucket="postgres_export_mfennemore",
   filename="ex_{{ execution_date }}",
   postgres_conn_id="postgres_default",
