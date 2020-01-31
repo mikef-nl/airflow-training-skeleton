@@ -25,7 +25,7 @@ t1 = PythonOperator(
     dag=dag)
 
 t5 = DummyOperator(task_id='the_end', dag=dag)
-wait_periods = [1,5,10]
+wait_periods = ['1','5','10']
 for wait_period in wait_periods:
     t1 >> BashOperator(task_id='wait_'+wait_period, bash_command="sleep "+wait_period, dag=dag) >> t5
 #t2 = BashOperator(task_id='wait_5', bash_command="sleep 5", dag=dag)
