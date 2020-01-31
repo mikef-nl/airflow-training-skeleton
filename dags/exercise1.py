@@ -4,8 +4,7 @@ from airflow.operators.dummy_operator import DummyOperator
 
 dag = DAG(
     dag_id='exercise1',
-    schedule_interval=None,
-    dagrun_timeout=timedelta(minutes=60),
+    schedule_interval=None
 )
 
 t1 = DummyOperator(task_id='task1', dag=dag)
