@@ -2,8 +2,14 @@ import airflow
 from airflow.models import DAG
 from airflow.operators.dummy_operator import DummyOperator
 
+args = {
+    'owner': 'Mike',
+    'start_date': airflow.utils.dates.days_ago(2),
+}
+
 dag = DAG(
     dag_id='exercise1',
+    default_args=args,
     schedule_interval=None
 )
 
