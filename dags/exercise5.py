@@ -1,4 +1,4 @@
-from airflow.contrib.operators import PostgresToGoogleCludStorageOperator
+from airflow.contrib.operators import PostgresToGoogleCloudStorageOperator
 import airflow
 from airflow.models import DAG
 
