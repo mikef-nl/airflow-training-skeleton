@@ -9,7 +9,7 @@ args = {
 }
 
 dag = DAG(
-    dag_id='exercise1',
+    dag_id='exercise2',
     default_args=args,
     schedule_interval=@daily
 )
