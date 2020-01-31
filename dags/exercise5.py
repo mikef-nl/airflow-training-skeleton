@@ -15,7 +15,7 @@ dag = DAG(
 
 t1 = PostgresToGoogleCloudStorageOperator(
   task_id="postgres_to_gcs",
-  sql="SELECT * FROM postgres.land_registry_price_paid_uk WHERE transfer_date is {{ execution_date }}",
+  sql="SELECT * FROM postgres.land_registry_price_paid_uk WHERE transfer_date is {{ ds }}",
   bucket="postgres_export_mfennemore",
   filename="ex_{{ execution_date }}",
   postgres_conn_id="postgres_default",
