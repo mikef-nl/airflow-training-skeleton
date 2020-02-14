@@ -1,5 +1,5 @@
 import airflow
-from airflow.operators.base_operator import BaseOperator
+from airflow.models import BaseOperator
 
 class LaunchLibraryOperator(BaseOperator):
 
