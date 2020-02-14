@@ -1,6 +1,6 @@
 import airflow
 from airflow.models import DAG
-from dags.operators.launch_library_operator import LaunchLibraryOperator
+from operators.launch_library_operator import LaunchLibraryOperator
 
 args = {"owner": "godatadriven", "start_date": airflow.utils.dates.days_ago(10)}
 dag = DAG(
