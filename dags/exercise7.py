@@ -11,7 +11,7 @@ dag = DAG(
 )
 
 get_rates = HttpToGcsOperator( 
-    http_conn_id = "https://api.exchangeratesapi.io/history?start_at=2018-01-01&end_at=2018-01-02&symbols=EUR&base=GBP",
+    http_conn_id = "https_exchange_default",
     endpoint = "/data",
     gcs_bucket = "https://console.cloud.google.com/storage/browser/europe-west1-training-airfl-90de010f-bucket",
     gcs_path = "/data/{{ ds }}",
