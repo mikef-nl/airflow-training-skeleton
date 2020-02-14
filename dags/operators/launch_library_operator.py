@@ -1,7 +1,7 @@
 import airflow
 from airflow.models import BaseOperator
 from airflow import AirflowException
-from hooks import LaunchHook
+from hooks.launch_hook import LaunchHook
 from airflow.utils.decorators import apply_defaults
 
 class LaunchLibraryOperator(BaseOperator):
