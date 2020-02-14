@@ -17,5 +17,5 @@ class LaunchLibraryOperator(BaseOperator):
         self._result_path = result_path
     
     def execute(self, context):
-        hook = LaunchHook()
+        hook = LaunchHook(self.conn_id)
         hook.download_launches(self.conn_id)
