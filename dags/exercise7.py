@@ -15,6 +15,8 @@ get_rates = HttpToGcsOperator(
     endpoint = "/data",
     gcs_bucket = "https://console.cloud.google.com/storage/browser/europe-west1-training-airfl-90de010f-bucket",
     gcs_path = "/data/{{ ds }}",
+    task_id='get_rates', 
+    dag=dag
 )
 
 get_rates
